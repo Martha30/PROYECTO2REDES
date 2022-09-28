@@ -4,15 +4,15 @@ import os
 
 
 def create_all_cards():
+    rojo = "rojo"
+    negro = "negro"
     deck = []
-    for typeC in ["corazonesROJOS", "diamantesROJOS", "picasBlancos", "trebolesBlancos"]:
-        for number in range(1, 13):
+    for typeC in ["corazones rojas", "diamantes rojas", "picas negras", "treboles negras"]:
+        for number in range(1, 10):
             deck.append(Card(typeC, number, None))
-            for special_ability in ["A", "J", "K", "Q"]: 
-                deck.append(Card(typeC, special_ability=special_ability))
-            
-                
-                    
+        for special_ability in ["A", "J", "K", "Q"]: 
+            deck.append(Card(typeC, special_ability=special_ability))
+                 
     deck.append(Card(special_ability="Joker"))
         
     return deck
