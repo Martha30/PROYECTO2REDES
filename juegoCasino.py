@@ -25,7 +25,7 @@ class Juego:
    
    def jugar(self, jugador):
       if jugador.esHumano():
-         print("\r\n"+jugador.nombre+"\r\n"+Colores.BOLD+"Tu mano"+Colores.END)
+         print("\r\n"+jugador.nombre+"\r\n"+Colores.BOLD+"Tus cartas"+Colores.END)
          jugador.mostrarMano(seleccion=True)
          opcion=Utilidades.preguntarOpciones("Que quieres hacer [C: escoger de mesa, T: Tirar]: ",["T","C", "V"])
          print("la opcion escogida es "+opcion)
@@ -46,7 +46,7 @@ class Juego:
                   print("No puedes escoger todas las cartas")
                   return False
                            
-               #SI cogemos todas
+               
 
          elif(opcion=="T"):
             posCartaEscogida=Utilidades.preguntarNumero("Que carta quieres tirar: ",1,len(jugador.mano))
